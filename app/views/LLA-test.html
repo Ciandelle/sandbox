@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Legal Aid test page
+{% endblock %}
+
+{% block content %}
+<a href="/" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        <h1 class="govuk-heading-xl">Choose the option that best describes your personal situation</h1>
+      </legend>
+
+      <div class="govuk-inset-text">
+        This page has a safety feature that helps you to quickly hide the page.
+        <a href="#" class="govuk-link">Read about the safety feature and staying safe online</a>.
+      </div>
+
+      <p class="govuk-body" id="aria-staying-safe-online">The information you enter won’t be stored on this device. Find
+        out more about <a href="/online-safety" class="govuk-link">staying safe online</a>.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="physical-situation-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation" name="physical-situation" type="radio"
+                  value="domestic-abuse" aria-describedby="physical-situation-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation">
+                  Domestic abuse
+                </label>
+                <div id="physical-situation-item-hint" class="govuk-hint govuk-radios__hint">
+                  You want to protect yourself or your children against domestic abuse (including psychological,
+                  physical, financial, sexual or emotional abuse)
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-2" name="physical-situation" type="radio"
+                  value="enforcing-an-injunction" aria-describedby="physical-situation-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-2">
+                  Enforcing an injunction
+                </label>
+                <div id="physical-situation-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Your partner or ex-partner is ignoring an injunction you have taken out against them
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-3" name="physical-situation" type="radio"
+                  value="harassment" aria-describedby="physical-situation-3-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-3">
+                  Harassment
+                </label>
+                <div id="physical-situation-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  You are being harassed by a partner, ex-partner or family member
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-4" name="physical-situation" type="radio"
+                  value="contesting-an-injunction" aria-describedby="physical-situation-4-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-4">
+                  Contesting an injunction
+                </label>
+                <div id="physical-situation-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  You want to contest an injunction that has been taken out against you
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-5" name="physical-situation" type="radio"
+                  value="Forced-marriage" aria-describedby="physical-situation-5-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-5">
+                  Forced marriage
+                </label>
+                <div id="physical-situation-5-item-hint" class="govuk-hint govuk-radios__hint">
+                  You want advice about forced marriage
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-6" name="physical-situation" type="radio"
+                  value="female-genital-mutilation" aria-describedby="physical-situation-6-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-6">
+                  Female genital mutilation
+                </label>
+                <div id="physical-situation-6-item-hint" class="govuk-hint govuk-radios__hint">
+                  You’re worried that you may become a victim of female genital mutilation
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="physical-situation-7" name="physical-situation" type="radio"
+                  value="other" aria-describedby="physical-situation-7-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold govuk-!-font-size-24"
+                  for="physical-situation-7">
+                  Any other problem
+                </label>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <!-- Code sits above the 'skip to main content' <div> to warn users that this feature exists on the page -->
+    <div class="govuk-quick-exit__container govuk-visually-hidden">
+      <p class="govuk-body">
+        To leave the page quickly, press the escape key.
+      </p>
+    </div>
+
+    <!-- Code used for the component and sits inside the <main> content wrapper -->
+    <div class="govuk-quick-exit__container govuk-quick-exit__enabled">
+      <div class="govuk-quick-exit__position">
+        <a href="https://www.google.com" id="quick-exit" tabindex="-1"
+          class="govuk-button govuk-button--warning govuk-quick-exit">
+          <strong>Hide this page</strong>
+          <span class="govuk-visually-hidden">Or press escape key to hide this page</span>
+        </a>
+        <p class="govuk-body govuk-quick-exit--info govuk-!-font-size-14">
+          (Or press Esc key)
+        </p>
+      </div>
+      <p class="govuk-button govuk-quick-exit__IEsizing">
+        <strong>Hide this page</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
