@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Legal Aid test page
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Bank or building society account details</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="name-on-the-account">
+          Name on the account
+        </label>
+        <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false"
+          autocomplete="name">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort-code">
+          Sort code
+        </label>
+        <div id="sort-code-hint" class="govuk-hint">
+          Must be 6 digits long
+        </div>
+        <input class="govuk-input govuk-input--width-5" id="sort-code" name="sort-code" type="text" spellcheck="false"
+          aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="account-number">
+          Account number
+        </label>
+        <div id="account-number-hint" class="govuk-hint">
+          Must be between 6 and 8 digits long
+        </div>
+        <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text"
+          spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="roll-number">
+          Building society roll number (if you have one)
+        </label>
+        <div id="roll-number-hint" class="govuk-hint">
+          You can find it on your card, statement or passbook
+        </div>
+        <input class="govuk-input govuk-input--width-10" id="roll-number" name="roll-number" type="text"
+          spellcheck="false" aria-describedby="roll-number-hint">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-quick-exit__container govuk-visually-hidden">
+        <p class="govuk-body">
+          To leave the page quickly, press the escape key.
+        </p>
+      </div>
+
+      <!-- Code used for the component and sits inside the <main> content wrapper -->
+      <div class="govuk-quick-exit__container govuk-quick-exit__enabled">
+        <div class="govuk-quick-exit__position">
+          <a href="https://www.google.com" id="quick-exit" tabindex="-1"
+            class="govuk-button govuk-button--warning govuk-quick-exit">
+            <strong>Hide this page</strong>
+            <span class="govuk-visually-hidden">Or press escape key to hide this page</span>
+          </a>
+          <p class="govuk-body govuk-quick-exit--info govuk-!-font-size-14">
+            (Or press Esc key)
+          </p>
+        </div>
+        <p class="govuk-button govuk-quick-exit__IEsizing">
+          <strong>Hide this page</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Legal Aid test page
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend">
+          <h1 class="govuk-heading-xl">Check if you’re eligible to apply</h1>
+        </legend>
+
+        <p class="govuk-body">
+          This page has a safety feature that helps you to quickly hide the page. <a href="/safety-guidance-page"
+            class="govuk-link">Read about the safety feature and staying safe online</a>.
+        </p>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <form action="/form-handler" method="post" novalidate>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Where do you live?
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio"
+                          value="england">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                          England
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live"
+                          type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                          Scotland
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live"
+                          type="radio" value="wales">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                          Wales
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live"
+                          type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                          Northern Ireland
+                        </label>
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                  Continue
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </main>
+      </fieldset>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-quick-exit__container govuk-visually-hidden">
+        <p class="govuk-body">
+          To leave the page quickly, press the escape key.
+        </p>
+      </div>
+  
+      <!-- Code used for the component and sits inside the <main> content wrapper -->
+      <div class="govuk-quick-exit__container govuk-quick-exit__enabled">
+        <div class="govuk-quick-exit__position">
+          <a href="https://www.google.com" id="quick-exit" tabindex="-1"
+            class="govuk-button govuk-button--warning govuk-quick-exit">
+            <strong>Hide this page</strong>
+            <span class="govuk-visually-hidden">Or press escape key to hide this page</span>
+          </a>
+          <p class="govuk-body govuk-quick-exit--info govuk-!-font-size-14">
+            (Or press Esc key)
+          </p>
+        </div>
+        <p class="govuk-button govuk-quick-exit__IEsizing">
+          <strong>Hide this page</strong>
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
